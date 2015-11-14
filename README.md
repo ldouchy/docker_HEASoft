@@ -27,6 +27,8 @@
 
 [HEAsoft v6.17 - Known Issues](https://heasarc.gsfc.nasa.gov/lheasoft/issues.html)
 
+[PyXspec documentation](https://heasarc.gsfc.nasa.gov/xanadu/xspec/python/PyXspec.pdf)
+
 # let's play with Docker
 
 Links to the [official docker documentation](https://docs.docker.com/):
