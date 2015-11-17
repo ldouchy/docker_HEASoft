@@ -4,7 +4,7 @@ FROM ubuntu:15.10
 
 MAINTAINER ldouchy
 
-LABEL version="0.2" HEASoft_version="6.17" description="HEASoft software https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/"
+LABEL version="0.3" HEASoft_version="6.17" description="HEASoft software https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/"
 
 ENV CC=/usr/bin/gcc \
     CXX=/usr/bin/g++ \
@@ -60,7 +60,7 @@ RUN apt-get update && \
 #RUN tar xzvf /opt/heasoft-6.17src.tar.gz
 
 # Or fresh download + auto  uncompress
-ADD /heasarc.gsfc.nasa.gov/FTP/software/lheasoft/lheasoft6.17/heasoft-6.17src.tar.gz /opt/
+RUN wget /heasarc.gsfc.nasa.gov/FTP/software/lheasoft/lheasoft6.17/heasoft-6.17src.tar.gz /opt/
 
 # execute install script
 
