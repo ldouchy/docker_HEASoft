@@ -36,8 +36,6 @@ ENV CC=/usr/bin/gcc \
     PYTHONPATH=/opt/heasoft/x86_64-unknown-linux-gnu-libc2.21-0/lib/python:/opt/heasoft/x86_64-unknown-linux-gnu-libc2.21-0/lib \
     TCLRL_LIBDIR=/opt/heasoft/x86_64-unknown-linux-gnu-libc2.21-0/lib
 
-WORKDIR /opt
-
 # Install HEASoft prerequisites
 
 RUN apt-get update && \
@@ -54,13 +52,15 @@ RUN apt-get update && \
 	xorg-dev \
     && rm -rf /var/lib/apt/lists/*
 
+WORKDIR /opt/
+
 # copy the file heasoft-6.17src.tar.gz
 #COPY heasoft-6.17src.tar.gz /opt/
 # Uncompress the HEASoft
 #RUN tar xzvf /opt/heasoft-6.17src.tar.gz
 
 # Or fresh download + auto  uncompress
-RUN wget /heasarc.gsfc.nasa.gov/FTP/software/lheasoft/lheasoft6.17/heasoft-6.17src.tar.gz /opt/
+#RUN wget /heasarc.gsfc.nasa.gov/FTP/software/lheasoft/lheasoft6.17/heasoft-6.17src.tar.gz /opt/
 
 # execute install script
 
