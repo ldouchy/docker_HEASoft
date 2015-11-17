@@ -52,6 +52,7 @@ RUN apt-get update && \
 	xorg-dev \
     && rm -rf /var/lib/apt/lists/*
 
+
 WORKDIR /opt/
 
 # copy the file heasoft-6.17src.tar.gz
@@ -60,7 +61,7 @@ WORKDIR /opt/
 #RUN tar xzvf /opt/heasoft-6.17src.tar.gz
 
 # Or fresh download + auto  uncompress
-#RUN wget /heasarc.gsfc.nasa.gov/FTP/software/lheasoft/lheasoft6.17/heasoft-6.17src.tar.gz /opt/
+RUN wget /heasarc.gsfc.nasa.gov/FTP/software/lheasoft/lheasoft6.17/heasoft-6.17src.tar.gz 
 
 # execute install script
 
