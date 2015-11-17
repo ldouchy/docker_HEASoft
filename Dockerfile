@@ -61,7 +61,7 @@ WORKDIR /opt/
 #RUN tar xzvf /opt/heasoft-6.17src.tar.gz
 
 # Or fresh download + auto  uncompress
-RUN wget /heasarc.gsfc.nasa.gov/FTP/software/lheasoft/lheasoft6.17/heasoft-6.17src.tar.gz 
+RUN wget http://heasarc.gsfc.nasa.gov/FTP/software/lheasoft/lheasoft6.17/heasoft-6.17src.tar.gz
 
 # execute install script
 
