@@ -10,9 +10,10 @@ and J. J. E. Hayes (San Francisco: ASP), 367.
 ```
 
 The latest XSPEC reference is:
-  `Arnaud, K.A., 1996, Astronomical Data Analysis Software and Systems V,
-  eds. Jacoby G. and Barnes J., p17, ASP Conf. Series volume 101.`
-
+```
+Arnaud, K.A., 1996, Astronomical Data Analysis Software and Systems V,
+eds. Jacoby G. and Barnes J., p17, ASP Conf. Series volume 101.
+```
 
 ## Default beaviour of the container:
 Launched without option this container run the command: fhelp xspec
