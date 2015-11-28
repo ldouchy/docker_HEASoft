@@ -1,6 +1,6 @@
 # [HEASoft](https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/) docker image:
 
-## Acknowledge
+## Acknowledgement
 
 If HEASoft has been useful in your research, please reference this website (http://heasarc.gsfc.nasa.gov/lheasoft/)
 
