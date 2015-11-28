@@ -4,7 +4,7 @@ FROM ubuntu:15.10
 
 MAINTAINER ldouchy
 
-LABEL version="0.3" HEASoft_version="6.17" description="HEASoft software https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/"
+LABEL HEASoft_version="6.17" description="HEASoft software https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/"
 
 ENV CC=/usr/bin/gcc \
     CXX=/usr/bin/g++ \
