@@ -1,4 +1,4 @@
-# Dockerfile to create a container running HEASoft 6.17
+# Dockerfile to create a container running HEASoft 6.19
 
 FROM ubuntu:16.10
 
@@ -55,10 +55,10 @@ RUN apt-get update && \
 
 WORKDIR /opt/
 
-# copy the file heasoft-6.17src.tar.gz
-#COPY heasoft-6.17src.tar.gz /opt/
+# copy the file heasoft-6.19src.tar.gz
+#COPY heasoft-6.19src.tar.gz /opt/
 # Uncompress the HEASoft
-#RUN tar xzvf /opt/heasoft-6.17src.tar.gz
+#RUN tar xzvf /opt/heasoft-6.19src.tar.gz
 
 # Or fresh download
 RUN wget http://heasarc.gsfc.nasa.gov/FTP/software/lheasoft/lheasoft6.19/heasoft-6.19src.tar.gz
