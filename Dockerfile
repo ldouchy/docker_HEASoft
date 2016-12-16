@@ -1,10 +1,10 @@
 # Dockerfile to create a container running HEASoft 6.17
 
-FROM ubuntu:15.10
+FROM ubuntu:16.10
 
 MAINTAINER ldouchy
 
-LABEL HEASoft_version="6.17" description="HEASoft software https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/"
+LABEL HEASoft_version="6.19" description="HEASoft software https://heasarc.gsfc.nasa.gov/docs/software/lheasoft/"
 
 ENV CC=/usr/bin/gcc \
     CXX=/usr/bin/g++ \
@@ -61,12 +61,12 @@ WORKDIR /opt/
 #RUN tar xzvf /opt/heasoft-6.17src.tar.gz
 
 # Or fresh download
-RUN wget http://heasarc.gsfc.nasa.gov/FTP/software/lheasoft/lheasoft6.17/heasoft-6.17src.tar.gz
-RUN tar xzvf /opt/heasoft-6.17src.tar.gz
+RUN wget http://heasarc.gsfc.nasa.gov/FTP/software/lheasoft/lheasoft6.19/heasoft-6.19src.tar.gz
+RUN tar xzvf /opt/heasoft-6.19src.tar.gz
 
 # execute install script
 
-RUN cd /opt/heasoft-6.17/BUILD_DIR/ && ./configure --prefix=/opt/heasoft/ 2>&1 | tee /opt/config.out && make 2>&1 | tee /opt/build.log && make install 2>&1 | tee /opt/install.log && rm -rf /opt/heasoft-6.17*
+RUN cd /opt/heasoft-6.19/BUILD_DIR/ && ./configure --prefix=/opt/heasoft/ 2>&1 | tee /opt/config.out && make 2>&1 | tee /opt/build.log && make install 2>&1 | tee /opt/install.log && rm -rf /opt/heasoft-6.19*
 
 # Simple test
 # In most other cases, CMD should be given an interactive shell
